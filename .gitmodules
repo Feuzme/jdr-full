@@ -1,0 +1,6 @@
+[submodule "jdr-back"]
+	path = jdr-back
+	url = https://github.com/Feuzme/jdr-back.git
+[submodule "JDR-Front"]
+	path = JDR-Front
+	url = https://github.com/Feuzme/JDR-Front.git
