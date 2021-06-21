@@ -14,3 +14,7 @@ services:
             - MONGO_HOST=mongo
         depends_on:
             - mongo
+    front:
+        build: JDR-Front
+        ports:
+            - 80:80
