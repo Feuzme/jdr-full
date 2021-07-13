@@ -17,3 +17,7 @@ Pour executer une commande sur tous les submodules:
 ```
 git submodule foreach <commande>
 ```
+
+## demarrer le projet
+
+dans un terminal Powershell à la racine du projet : ```./docker.start.ps1```

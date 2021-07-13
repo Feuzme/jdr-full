@@ -5,6 +5,7 @@ services:
         image: mongo
         ports:
             - 27017:27017
+
     back:
         build: jdr-back
         ports:
@@ -14,6 +15,7 @@ services:
             - MONGO_HOST=mongo
         depends_on:
             - mongo
+
     front:
         build: JDR-Front
         ports:
