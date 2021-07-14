@@ -1,10 +1,6 @@
-version: "3.3"
+version: "3.7"
 
 services:
-    mongo:
-        image: mongo
-        ports:
-            - 27017:27017
 
     back:
         build: jdr-back
@@ -13,6 +9,8 @@ services:
         environment: 
             - SERVER_PORT=8080
             - MONGO_HOST=mongo
+            - MONGO_PORT=27017
+            - MONGO_DB=jdr
         depends_on:
             - mongo
 
@@ -20,3 +18,15 @@ services:
         build: JDR-Front
         ports:
             - 80:80
+        depends_on:
+            - jdr-back  
+        
+        
+    mongo:
+        image: mongo
+        restart: always
+        volumes: 
+            - ./data/db:/data/db    
+        ports:
+            - 27017:27017
+
